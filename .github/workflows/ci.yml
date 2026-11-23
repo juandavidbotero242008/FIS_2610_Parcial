@@ -46,7 +46,7 @@ jobs:
 
       - name: Publicar resultados JUnit en el resumen del workflow
         if: always()
-        uses: dorny/test-reporter@v1
+        uses: dorny/test-reporter@v2
         with:
           name: Resultados JUnit
           path: target/surefire-reports/*.xml
