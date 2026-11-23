@@ -76,5 +76,15 @@ jobs:
           echo "### Resultado de la pipeline" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- Compilacion y pruebas: \`mvn clean verify\`" >> $GITHUB_STEP_SUMMARY
+          if ls target/surefire-reports/*.xml >/dev/null 2>&1; then
+            PRUEBAS=$(grep -h "<testsuite" target/surefire-reports/*.xml \
+              | sed -E 's/.*tests="([0-9]+)".*/\1/' | awk '{s+=$1} END {print s}')
+            echo "- Pruebas ejecutadas: **$PRUEBAS**" >> $GITHUB_STEP_SUMMARY
+          fi
+          if [ -f target/site/jacoco/jacoco.csv ]; then
+            read -r MISSED COVERED < <(awk -F, 'NR>1 {m+=$4; c+=$5} END {print m, c}' target/site/jacoco/jacoco.csv)
+            PCT=$(awk -v m="$MISSED" -v c="$COVERED" 'BEGIN {printf "%.2f", 100*c/(m+c)}')
+            echo "- Cobertura de instrucciones: **$PCT %**" >> $GITHUB_STEP_SUMMARY
+          fi
           echo "- Quality gate: cobertura de instrucciones >= 70% (JaCoCo)" >> $GITHUB_STEP_SUMMARY
           echo "- Artefactos: reporte JaCoCo y reportes Surefire" >> $GITHUB_STEP_SUMMARY
