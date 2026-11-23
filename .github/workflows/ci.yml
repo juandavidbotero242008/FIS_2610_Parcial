@@ -1,0 +1,80 @@
+name: CI - Parcial 2 FIS
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - "feature/**"
+  pull_request:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  MAVEN_OPTS: -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss
+
+jobs:
+  calidad:
+    name: Compilacion, pruebas y cobertura
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      - name: Compilar, probar y verificar cobertura
+        run: mvn -B -ntp clean verify
+
+      - name: Publicar resultados JUnit en el resumen del workflow
+        if: always()
+        uses: dorny/test-reporter@v1
+        with:
+          name: Resultados JUnit
+          path: target/surefire-reports/*.xml
+          reporter: java-junit
+          fail-on-error: false
+          fail-on-empty: false
+
+      - name: Subir reporte de cobertura JaCoCo
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cobertura-jacoco
+          path: target/site/jacoco/
+          retention-days: 15
+
+      - name: Subir reportes de pruebas Surefire
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reportes-surefire
+          path: target/surefire-reports/
+          retention-days: 15
+
+      - name: Resumen de calidad
+        if: always()
+        run: |
+          echo "### Resultado de la pipeline" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Compilacion y pruebas: \`mvn clean verify\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Quality gate: cobertura de instrucciones >= 70% (JaCoCo)" >> $GITHUB_STEP_SUMMARY
+          echo "- Artefactos: reporte JaCoCo y reportes Surefire" >> $GITHUB_STEP_SUMMARY
