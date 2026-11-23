@@ -44,16 +44,6 @@ jobs:
       - name: Compilar, probar y verificar cobertura
         run: mvn -B -ntp clean verify
 
-      - name: Publicar resultados JUnit en el resumen del workflow
-        if: always()
-        uses: dorny/test-reporter@v2
-        with:
-          name: Resultados JUnit
-          path: target/surefire-reports/*.xml
-          reporter: java-junit
-          fail-on-error: false
-          fail-on-empty: false
-
       - name: Subir reporte de cobertura JaCoCo
         if: always()
         uses: actions/upload-artifact@v6
