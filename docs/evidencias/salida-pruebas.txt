@@ -1,0 +1,29 @@
+Evidencia local de la suite de pruebas
+Comando: mvn -B clean verify
+Fecha: 2026-11-23 17:59:17
+Java: openjdk version "17.0.21.1" 2026-11-17
+Maven: Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)
+
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in co.edu.javeriana.fis.electoral.patrones.estructural.facade.ServicioElectoralFacadeTest
+[INFO] Tests run: 273, Failures: 0, Errors: 0, Skipped: 0
+[INFO] All coverage checks have been met.
+[INFO] BUILD SUCCESS
+
+Resumen por clase de prueba:
+co.edu.javeriana.fis.electoral.dominio.ActaTest 20
+co.edu.javeriana.fis.electoral.dominio.CandidatoTest 16
+co.edu.javeriana.fis.electoral.dominio.DepartamentoTest 15
+co.edu.javeriana.fis.electoral.dominio.IncidenteTest 12
+co.edu.javeriana.fis.electoral.dominio.JuradoTest 17
+co.edu.javeriana.fis.electoral.dominio.MesaTest 25
+co.edu.javeriana.fis.electoral.dominio.MunicipioTest 13
+co.edu.javeriana.fis.electoral.dominio.PartidoTest 15
+co.edu.javeriana.fis.electoral.dominio.ProcesoElectoralTest 19
+co.edu.javeriana.fis.electoral.dominio.PuestoVotacionTest 19
+co.edu.javeriana.fis.electoral.dominio.ReclamacionTest 15
+co.edu.javeriana.fis.electoral.dominio.TestigoElectoralTest 8
+co.edu.javeriana.fis.electoral.patrones.comportamental.observer.PublicadorEventosTest 20
+co.edu.javeriana.fis.electoral.patrones.comportamental.state.EstadoProcesoTest 9
+co.edu.javeriana.fis.electoral.patrones.creacional.builder.ActaBuilderTest 10
+co.edu.javeriana.fis.electoral.patrones.creacional.factory.FabricaValidadoresTest 13
+co.edu.javeriana.fis.electoral.patrones.estructural.facade.ServicioElectoralFacadeTest 27

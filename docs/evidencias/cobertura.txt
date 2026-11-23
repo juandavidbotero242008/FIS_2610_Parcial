@@ -1,0 +1,9 @@
+Cobertura JaCoCo - mvn clean verify
+
+INSTRUCTION: 3046/3479 = 87.55%
+BRANCH: 364/447 = 81.43%
+LINE: 770/852 = 90.38%
+METHOD: 243/277 = 87.73%
+CLASS: 45/45 = 100.00%
+
+Umbral configurado: INSTRUCTION >= 70% (quality gate aprobado)
