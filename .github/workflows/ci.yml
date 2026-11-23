@@ -56,7 +56,7 @@ jobs:
 
       - name: Subir reporte de cobertura JaCoCo
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: cobertura-jacoco
           path: target/site/jacoco/
@@ -64,7 +64,7 @@ jobs:
 
       - name: Subir reportes de pruebas Surefire
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: reportes-surefire
           path: target/surefire-reports/
