@@ -157,7 +157,7 @@ crear_issue "[US-10] Suite de pruebas y matriz de trazabilidad" \
   "**Como** equipo **quiero** una suite de pruebas con casos negativos y de limite **para** asegurar la calidad.
 
 ### Criterios de aceptacion
-- [ ] 250 pruebas en verde.
+- [x] 273 pruebas en verde.
 - [ ] Cada metodo de negocio tiene al menos dos pruebas.
 - [ ] Cobertura de instrucciones >= 70 %.
 - [ ] Matriz de trazabilidad publicada.

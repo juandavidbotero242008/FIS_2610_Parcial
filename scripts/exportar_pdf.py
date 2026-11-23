@@ -198,10 +198,10 @@ def main() -> None:
       <div class="titulo">Sistema de Información para la Gestión, Transparencia y Análisis del Proceso Electoral en Colombia</div>
       <div class="subtitulo">Segundo Parcial — Fundamentos de Ingeniería de Software</div>
       <div class="datos">
-        <strong>Integrantes:</strong> [Nombre 1] · [Nombre 2]<br>
+        <strong>Integrante:</strong> Juan David Botero<br>
         <strong>Docente:</strong> [Nombre del docente]<br>
         <strong>Repositorio:</strong> github.com/juandavidbotero242008/FIS_2610_Parcial<br>
-        <strong>Fecha:</strong> [DD/MM/2026]
+        <strong>Fecha:</strong> 23/11/2026
       </div>
       <div class="pie">Java 17 · Maven · JUnit 5 · JaCoCo · GitHub Actions</div>
     </div>

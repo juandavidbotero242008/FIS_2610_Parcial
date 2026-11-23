@@ -1,26 +1,25 @@
 # Evidencias
 
-## Generadas localmente (ya incluidas)
+Todas las evidencias fueron generadas a partir de la ejecución real del proyecto y del repositorio publicado.
 
 | Archivo | Contenido |
 |---|---|
-| `salida-pruebas.txt` | Resumen de `mvn -B clean verify`: 265 pruebas, quality gate y conteo por clase |
-| `cobertura.txt` | Contadores de JaCoCo (instrucciones, ramas, líneas, métodos y clases) |
+| `01-mvn-verify.png` / `salida-pruebas.txt` | `mvn -B clean verify`: 273 pruebas, quality gate y conteo por clase |
+| `02-jacoco.png` / `cobertura.txt` | Reporte JaCoCo y contadores de cobertura |
+| `03-actions-exito.png` / `03-actions-exito.txt` | Run del workflow en `feature/parcial-2` y en `main` |
+| `04-actions-etapas.png` / `04-actions-etapas.txt` | Etapas del job de calidad |
+| `05-junit-actions.png` / `05-junit-actions.txt` | Salida real del run: 273 pruebas y `BUILD SUCCESS` |
+| `06-issues.png` / `06-issues.txt` | Los 12 issues cerrados con sus etiquetas |
+| `08-commits.png` / `historial-commits.txt` | Historial de conventional commits |
+| `09-cobertura-clases.png` | Cobertura por paquete y clase |
 | `diagramas/diagrama-1.png` | Diagrama de clases renderizado desde Mermaid |
 | `diagramas/diagrama-2.png` | Flujo del pipeline renderizado desde Mermaid |
 
-## Capturas pendientes (requieren publicar el repositorio)
+## Enlaces vivos
 
-Guardar con estos nombres para que el informe las muestre:
+- Repositorio: <https://github.com/juandavidbotero242008/FIS_2610_Parcial>
+- Run del equipo: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149>
+- Issues: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues?q=is%3Aissue>
+- Commits: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/commits/main>
 
-- `01-mvn-verify.png` — consola con `BUILD SUCCESS` y el quality gate.
-- `02-jacoco.png` — portada del reporte en `target/site/jacoco/index.html`.
-- `03-actions-exito.png` — run en verde en GitHub Actions.
-- `04-actions-etapas.png` — detalle de las etapas del job.
-- `05-junit-actions.png` — resultados JUnit publicados en el run.
-- `06-issues.png` — listado de issues del backlog.
-- `07-projects.png` — tablero Scrum.
-- `08-commits.png` — `git log --oneline --graph`.
-- `09-cobertura-clases.png` — cobertura por clase en JaCoCo.
-
-> Mientras no existan, el PDF del informe solo muestra el texto alternativo de cada figura; al agregarlas, vuelva a ejecutar `python3 scripts/exportar_pdf.py`.
+> No se creó un tablero en GitHub Projects; el seguimiento se evidencia con las etiquetas de sprint y el estado cerrado de los issues.

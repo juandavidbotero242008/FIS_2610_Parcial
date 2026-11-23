@@ -1,0 +1,11 @@
+* 9f78097 (HEAD -> feature/parcial-2, origin/main, origin/feature/parcial-2, main) docs: redactar informe, matriz de trazabilidad y backlog Scrum
+* 3ae93d8 chore(scripts): automatizar backlog y exportacion del informe
+* 7713d41 chore(github): agregar plantillas de issues y pull request
+* 2cbd8f8 ci: agregar pipeline de GitHub Actions con JaCoCo
+* 2c17d13 test(dominio): cubrir metodos con casos negativos y de limite
+* 4def3c2 feat(fachada): agregar ServicioElectoralFacade
+* e5be773 feat(eventos): implementar Observer para auditoria y partidos
+* dc37def feat(actas): implementar Builder y Factory Method de validacion
+* 0086e42 feat(dominio): implementar proceso electoral con patron State
+* ee88120 feat(dominio): agregar jerarquia territorial con Composite
+* c85122c chore: configurar Maven, Java 17 y JUnit 5

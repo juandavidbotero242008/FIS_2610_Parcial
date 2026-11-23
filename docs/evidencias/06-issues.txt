@@ -1,0 +1,26 @@
+Backlog en GitHub Issues — 12 historias
+
+#01 [closed] [US-01] Modelo territorial con Composite  (historia, scrum, sprint-1, estructural)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/1
+#02 [closed] [US-02] Registro del proceso electoral y su calendario  (historia, scrum, sprint-1, comportamental)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/2
+#03 [closed] [US-03] Partidos, candidatos y respaldos  (historia, scrum, sprint-1)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/3
+#04 [closed] [US-04] Designacion de jurados  (historia, scrum, sprint-1)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/4
+#05 [closed] [US-05] Construccion validada de actas (Builder)  (historia, scrum, sprint-2, creacional)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/5
+#06 [closed] [US-06] Validacion por tipo de eleccion (Factory Method)  (historia, scrum, sprint-2, creacional)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/6
+#07 [closed] [US-07] Notificacion de eventos y auditoria (Observer)  (historia, scrum, sprint-2, comportamental)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/7
+#08 [closed] [US-08] Reclamaciones e incidentes  (historia, scrum, sprint-2)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/8
+#09 [closed] [US-09] Fachada de servicios electorales (Facade)  (historia, scrum, sprint-2, estructural)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/9
+#10 [closed] [US-10] Suite de pruebas y matriz de trazabilidad  (historia, scrum, sprint-3, testing)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/10
+#11 [closed] [US-11] Pipeline CI/CD en GitHub Actions  (historia, scrum, sprint-3, devops)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/11
+#12 [closed] [US-12] Informe final y evidencias  (historia, scrum, sprint-3, docs)
+     https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues/12

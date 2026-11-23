@@ -1,0 +1,13 @@
+Etapas del pipeline (run 45287569149)
+
+Job: Compilacion, pruebas y cobertura -> completed / success
+  [success] Set up job
+  [success] Checkout del repositorio
+  [success] Configurar JDK 17
+  [success] Compilar, probar y verificar cobertura
+  [success] Subir reporte de cobertura JaCoCo
+  [success] Subir reportes de pruebas Surefire
+  [success] Resumen de calidad
+  [success] Post Configurar JDK 17
+  [success] Post Checkout del repositorio
+  [success] Complete job

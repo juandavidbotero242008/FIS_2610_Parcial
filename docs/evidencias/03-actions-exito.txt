@@ -1,0 +1,16 @@
+Evidencia de GitHub Actions
+
+Workflow : CI - Parcial 2 FIS
+Rama     : main
+Estado   : completed / success
+Commit   : 8aa30b3
+Inicio   : 2026-11-23T23:17:57Z
+URL      : https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287573938
+
+Workflow : CI - Parcial 2 FIS
+Rama     : feature/parcial-2
+Estado   : completed / success
+Commit   : 8aa30b3
+Inicio   : 2026-11-23T23:17:55Z
+URL      : https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149
+

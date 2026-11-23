@@ -6,9 +6,9 @@
 
 | Campo | Valor |
 |---|---|
-| Integrantes | [Nombre 1] — [Nombre 2] |
+| Integrantes | Juan David Botero |
 | Docente | [Nombre del docente] |
-| Fecha de entrega | [DD/MM/2026] |
+| Fecha de entrega | 23/11/2026 |
 | Repositorio | `https://github.com/juandavidbotero242008/FIS_2610_Parcial` |
 | Rama del equipo | `feature/parcial-2` |
 | Stack | Java 17 · Maven 3.9 · JUnit 5 · JaCoCo · GitHub Actions |
@@ -763,9 +763,7 @@ Tests run: 273, Failures: 0, Errors: 0, Skipped: 0
 
 ### 4.6 Evidencias
 
-> **Instrucción de entrega:** adjuntar las capturas reales en `docs/evidencias/` y reemplazar los enlaces.
-
-La salida completa de la verificación local está en [`evidencias/salida-pruebas.txt`](evidencias/salida-pruebas.txt) y los contadores de cobertura en [`evidencias/cobertura.txt`](evidencias/cobertura.txt).
+La salida completa de la verificación local está en [`evidencias/salida-pruebas.txt`](evidencias/salida-pruebas.txt) y los contadores de cobertura en [`evidencias/cobertura.txt`](evidencias/cobertura.txt). El run del pipeline está disponible en [GitHub Actions](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149).
 
 ![Ejecución de mvn clean verify](evidencias/01-mvn-verify.png)
 
@@ -797,7 +795,7 @@ flowchart LR
     B --> C[JDK 17 + cache Maven]
     C --> D[mvn clean verify]
     D --> E{Pruebas 273 y cobertura >= 70%?}
-    E -- Si --> F[Publicar JUnit + JaCoCo]
+    E -- Si --> F[Publicar resumen y artefactos]
     F --> G[Run exitoso]
     E -- No --> H[Run fallido y merge bloqueado]
 ```
@@ -807,12 +805,11 @@ flowchart LR
 | Etapa | Acción | Propósito |
 |---|---|---|
 | 1. Disparador | `push` a `main`, `develop` o `feature/**`; PR a `main`/`develop` | Validar cada cambio del equipo |
-| 2. Checkout | `actions/checkout@v4` | Obtener el código del commit |
-| 3. Entorno | `actions/setup-java@v4` con Temurin 17 y caché Maven | Reproducir el entorno local y acelerar |
+| 2. Checkout | `actions/checkout@v5` | Obtener el código del commit |
+| 3. Entorno | `actions/setup-java@v5` con Temurin 17 y caché Maven | Reproducir el entorno local y acelerar |
 | 4. Calidad | `mvn -B -ntp clean verify` | Compilar, ejecutar 273 pruebas, generar JaCoCo y aplicar el gate |
-| 5. Reportes | `dorny/test-reporter@v1` | Publicar resultados JUnit en el run |
-| 6. Artefactos | `actions/upload-artifact@v4` | Conservar JaCoCo y Surefire 15 días |
-| 7. Resumen | `$GITHUB_STEP_SUMMARY` | Dejar el resultado visible en el workflow |
+| 5. Artefactos | `actions/upload-artifact@v6` | Conservar JaCoCo y Surefire 15 días |
+| 6. Resumen | `$GITHUB_STEP_SUMMARY` | Publicar número de pruebas y porcentaje de cobertura en el run |
 
 ### 5.3 Fragmento del workflow
 
@@ -832,8 +829,8 @@ jobs:
   calidad:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
@@ -874,19 +871,19 @@ La cobertura actual (87.55 %) deja un margen de 17 puntos, suficiente para que e
 
 ### 5.5 Evidencias
 
-> **Instrucción de entrega:** adjuntar las capturas del run real.
+Run del equipo en la rama `feature/parcial-2`: [actions/runs/45287569149](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149). También quedó en verde la rama `main` en [actions/runs/45287573938](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287573938).
 
 ![Run exitoso en GitHub Actions](evidencias/03-actions-exito.png)
 
-*Figura 4. Run exitoso del workflow `CI - Parcial 2 FIS`.*
+*Figura 4. Run exitoso del workflow `CI - Parcial 2 FIS`, sin advertencias.*
 
 ![Etapas del pipeline](evidencias/04-actions-etapas.png)
 
 *Figura 5. Detalle de las etapas y del quality gate.*
 
-![Resultados JUnit publicados](evidencias/05-junit-actions.png)
+![Resultados de las pruebas en el log del run](evidencias/05-junit-actions.png)
 
-*Figura 6. Resultados de las 273 pruebas publicados por el pipeline.*
+*Figura 6. Salida real del run: 273 pruebas, gate aprobado y `BUILD SUCCESS`.*
 
 ### 5.6 Impacto en la calidad
 
@@ -904,9 +901,9 @@ La cobertura actual (87.55 %) deja un margen de 17 puntos, suficiente para que e
 
 | Rol | Responsable |
 |---|---|
-| Product Owner | [Nombre] |
-| Scrum Master | [Nombre] |
-| Development Team | [Nombres] |
+| Product Owner | Juan David Botero |
+| Scrum Master | Juan David Botero |
+| Development Team | Juan David Botero |
 
 Se planearon **3 sprints de una semana**, con revisión al final de cada uno y retrospectiva para ajustar el alcance.
 
@@ -927,19 +924,13 @@ El backlog completo, con criterios de aceptación y Definition of Done, está en
 - Etiquetas `historia`, `scrum`, `sprint-N` y la categoría del patrón (`creacional`, `estructural`, `comportamental`).
 - Criterios de aceptación verificables.
 - Story points.
-- Vínculo al commit o pull request que la cierra (`Closes #N`).
+- Comentario con el commit que implementa la historia.
 
-El flujo del tablero fue: **Backlog → En curso → En revisión → Hecho**.
-
-> **Instrucción de entrega:** adjuntar capturas del listado de issues y del tablero.
+El flujo se gestionó con **12 issues cerrados**, etiquetados por sprint (`sprint-1`, `sprint-2`, `sprint-3`) y por categoría de patrón. Cada issue incluye sus criterios de aceptación y un comentario con el commit que lo implementa. El listado está en [GitHub Issues](https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues?q=is%3Aissue).
 
 ![Issues del backlog](evidencias/06-issues.png)
 
-*Figura 7. Historias de usuario registradas como issues.*
-
-![Tablero Scrum](evidencias/07-projects.png)
-
-*Figura 8. Tablero Kanban con el avance del equipo.*
+*Figura 7. Las 12 historias registradas y cerradas como issues.*
 
 ### 6.4 Definition of Done
 
@@ -962,25 +953,24 @@ El flujo del tablero fue: **Backlog → En curso → En revisión → Hecho**.
 | `docs` | Informe, matriz y guía |
 | `chore` | Configuración de Maven y estructura inicial |
 
-Ejemplos del historial esperado:
+Historial real (extracto de `git log --oneline`):
 
 ```text
-feat(dominio): agregar jerarquia territorial con Composite
-feat(dominio): implementar proceso electoral con patron State
-feat(actas): implementar ActaBuilder con validaciones
-feat(validacion): agregar Factory Method por tipo de eleccion
-feat(eventos): implementar Observer para auditoria y partidos
-feat(fachada): agregar ServicioElectoralFacade
-test(dominio): cubrir metodos con casos negativos y de limite
-ci: agregar pipeline de GitHub Actions con JaCoCo
-docs: redactar informe y matriz de trazabilidad
+8aa30b3 ci: retirar test-reporter y resumir pruebas con el log
+9f78097 docs: redactar informe, matriz de trazabilidad y backlog Scrum
+2cbd8f8 ci: agregar pipeline de GitHub Actions con JaCoCo
+2c17d13 test(dominio): cubrir metodos con casos negativos y de limite
+4def3c2 feat(fachada): agregar ServicioElectoralFacade
+e5be773 feat(eventos): implementar Observer para auditoria y partidos
+dc37def feat(actas): implementar Builder y Factory Method de validacion
+0086e42 feat(dominio): implementar proceso electoral con patron State
+ee88120 feat(dominio): agregar jerarquia territorial con Composite
+c85122c chore: configurar Maven, Java 17 y JUnit 5
 ```
-
-> **Instrucción de entrega:** reemplazar este bloque por la salida real de `git log --oneline --graph --decorate` y adjuntar la captura.
 
 ![Historial de commits](evidencias/08-commits.png)
 
-*Figura 9. Historial con conventional commits.*
+*Figura 8. Historial con conventional commits en la rama `main`.*
 
 ---
 

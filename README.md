@@ -8,6 +8,8 @@
 
 Proyecto del **Segundo Parcial de Fundamentos de Ingeniería de Software** (Pontificia Universidad Javeriana). Modela el proceso electoral colombiano de 2026: planeación territorial, partidos y candidatos, jurados, actas de escrutinio, incidentes, reclamaciones y consolidación de resultados.
 
+**Repositorio:** <https://github.com/juandavidbotero242008/FIS_2610_Parcial> · **Pipeline:** [run en verde](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149) · **Issues:** [12 historias cerradas](https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues?q=is%3Aissue)
+
 
 ## Contenido
 
@@ -56,12 +58,14 @@ FIS_2610_Parcial/
 │   └── pull_request_template.md
 ├── docs/
 │   ├── informe.md                  # Informe final
+│   ├── informe.pdf                 # Versión PDF con evidencias
 │   ├── matriz-trazabilidad.md      # Métodos vs. pruebas
 │   ├── backlog-scrum.md            # Historias, sprints y issues
 │   ├── guia-github.md              # Runbook de Git, GitHub y evidencias
-│   └── evidencias/                 # Capturas de ejecución y pipeline
+│   └── evidencias/                 # Capturas, logs, cobertura y diagramas
 ├── scripts/
-│   └── crear-issues.sh             # Crea el backlog con GitHub CLI
+│   ├── crear-issues.sh             # Crea el backlog con GitHub CLI
+│   └── exportar_pdf.py             # Genera docs/informe.pdf
 └── src/
     ├── main/java/co/edu/javeriana/fis/electoral/
     │   ├── dominio/                # Entidades y Composite
@@ -116,8 +120,10 @@ Etapas:
 1. Checkout del código.
 2. Configuración de JDK 17 (Temurin) con caché de Maven.
 3. `mvn clean verify`: compilación, 273 pruebas, reporte JaCoCo y quality gate.
-4. Publicación de resultados JUnit y artefactos de cobertura.
-5. Resumen de calidad en el workflow.
+4. Publicación de los artefactos de cobertura y de pruebas.
+5. Resumen con el número de pruebas y el porcentaje de cobertura en el run.
+
+Run de referencia: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149>
 
 ## Documentación
 
@@ -128,7 +134,6 @@ Etapas:
 
 ## Autores
 
-- [Nombre integrante 1]
-- [Nombre integrante 2]
+- Juan David Botero
 
 **Curso:** Fundamentos de Ingeniería de Software — Segundo Parcial, 2026.

@@ -1,12 +1,12 @@
 # Guía de GitHub, Git y evidencias
 
-Esta guía deja el repositorio `FIS_2610_Parcial` listo para publicar y describe cómo recolectar las evidencias que exige el informe.
+Esta guía documenta el repositorio `FIS_2610_Parcial`, ya publicado, y describe cómo reproducir las evidencias del informe.
 
 ## 1. Requisitos
 
 - Git 2.30 o superior.
 - Cuenta de GitHub.
-- Opcional: [GitHub CLI](https://cli.github.com/) (`gh`) para crear issues y repositorio desde la terminal.
+- Opcional: [GitHub CLI](https://cli.github.com/) (`gh`) para gestionar issues desde la terminal.
 - JDK 17 y Maven 3.9 para ejecutar `mvn clean verify`.
 
 Configurar identidad (solo la primera vez):
@@ -16,31 +16,24 @@ git config --global user.name "Nombre Apellido"
 git config --global user.email "correo@javeriana.edu.co"
 ```
 
-## 2. Crear el repositorio
+## 2. Repositorio publicado
 
-### Opción A — desde GitHub CLI
+Repositorio: <https://github.com/juandavidbotero242008/FIS_2610_Parcial>
+
+El proyecto ya tiene `main` y `feature/parcial-2` publicadas, 12 issues cerrados y el pipeline en verde. Para clonarlo en otra máquina:
 
 ```bash
+git clone https://github.com/juandavidbotero242008/FIS_2610_Parcial.git
 cd FIS_2610_Parcial
-git init
-git add .
-git commit -m "chore: estructura inicial del proyecto electoral"
-gh repo create FIS_2610_Parcial --public --source=. --remote=origin --push
+git checkout feature/parcial-2
 ```
 
-### Opción B — desde la web
-
-1. Crear el repositorio `FIS_2610_Parcial` en GitHub **sin** README ni `.gitignore`.
-2. Enlazarlo y subir:
+Para publicar cambios nuevos:
 
 ```bash
-cd FIS_2610_Parcial
-git init
 git add .
-git commit -m "chore: estructura inicial del proyecto electoral"
-git branch -M main
-git remote add origin https://github.com/juandavidbotero242008/FIS_2610_Parcial.git
-git push -u origin main
+git commit -m "tipo(alcance): descripcion"
+git push origin feature/parcial-2
 ```
 
 
@@ -108,7 +101,9 @@ git log --oneline --graph --decorate
 
 ## 5. Issues y Scrum
 
-### Automático
+Los 12 issues ya están creados, etiquetados y cerrados: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues?q=is%3Aissue>
+
+### Recrearlos en otro repositorio
 
 ```bash
 gh auth login
@@ -120,7 +115,7 @@ bash scripts/crear-issues.sh juandavidbotero242008/FIS_2610_Parcial
 1. Ir a **Issues → New issue → Historia de usuario**.
 2. Usar los títulos `[US-01] ...` a `[US-12] ...` del archivo [`backlog-scrum.md`](backlog-scrum.md).
 3. Asignar etiquetas `historia`, `scrum`, `sprint-N` y la categoría del patrón.
-4. Crear un tablero en **Projects** con columnas: Backlog, En curso, En revisión, Hecho.
+4. Al cerrar cada issue, comentar el commit que lo implementa.
 
 ## 6. Pull requests
 
@@ -137,19 +132,20 @@ El pipeline corre automáticamente. No se hace merge si el quality gate falla.
 
 ## 7. Evidencias para el informe
 
-Guardar en `docs/evidencias/` con nombres descriptivos:
+Las evidencias ya están en `docs/evidencias/`:
 
-| Evidencia | Cómo obtenerla | Nombre sugerido |
-|---|---|---|
-| Ejecución local de pruebas | `mvn clean verify` y captura de consola | `01-mvn-verify.png` |
-| Reporte JaCoCo | Abrir `target/site/jacoco/index.html` | `02-jacoco.png` |
-| Run exitoso de Actions | GitHub → Actions → último run | `03-actions-exito.png` |
-| Detalle de etapas del pipeline | Pestaña del job `calidad` | `04-actions-etapas.png` |
-| Resultados JUnit publicados | Sección *Checks* del run | `05-junit-actions.png` |
-| Issues del backlog | GitHub → Issues filtrados | `06-issues.png` |
-| Tablero Scrum | GitHub → Projects | `07-projects.png` |
-| Historial de commits | `git log --oneline --graph` | `08-commits.png` |
-| Cobertura por clase | `target/site/jacoco/index.html` | `09-cobertura-clases.png` |
+| Evidencia | Archivo |
+|---|---|
+| Ejecución local de pruebas | `01-mvn-verify.png` y `salida-pruebas.txt` |
+| Reporte JaCoCo | `02-jacoco.png` y `cobertura.txt` |
+| Run exitoso de Actions | `03-actions-exito.png` y `03-actions-exito.txt` |
+| Detalle de etapas del pipeline | `04-actions-etapas.png` y `04-actions-etapas.txt` |
+| Resultados de pruebas del run | `05-junit-actions.png` y `05-junit-actions.txt` |
+| Issues del backlog | `06-issues.png` y `06-issues.txt` |
+| Historial de commits | `08-commits.png` y `historial-commits.txt` |
+| Cobertura por clase | `09-cobertura-clases.png` |
+
+> No se creó un tablero en GitHub Projects; el seguimiento se evidencia con las etiquetas de sprint y el estado cerrado de los issues.
 
 Comandos útiles para generar texto de evidencia:
 
@@ -193,11 +189,12 @@ pandoc docs/informe.md -o docs/informe.pdf --pdf-engine=weasyprint --toc
 
 ## 9. Checklist final de entrega
 
-- [ ] Repositorio público `FIS_2610_Parcial`.
-- [ ] Rama del equipo con el código y el pipeline.
-- [ ] Workflow en verde (evidencia del run).
-- [ ] 273 pruebas en verde y cobertura ≥ 70 %.
-- [ ] 12 issues creados y cerrados con sus commits.
-- [ ] Historial con conventional commits.
-- [ ] Informe PDF con justificaciones y capturas.
-- [ ] Badge del README apuntando al repositorio real.
+- [x] Repositorio público `FIS_2610_Parcial`.
+- [x] Rama del equipo con el código y el pipeline.
+- [x] Workflow en verde (evidencia del run).
+- [x] 273 pruebas en verde y cobertura ≥ 70 %.
+- [x] 12 issues creados y cerrados con sus commits.
+- [x] Historial con conventional commits.
+- [x] Informe PDF con justificaciones y capturas.
+- [x] Badge del README apuntando al repositorio real.
+- [ ] Completar el nombre del docente en la portada.

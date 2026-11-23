@@ -1,0 +1,5 @@
+23:18:11 [INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in co.edu.javeriana.fis.electoral.dominio.MesaTest
+23:18:11 [INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in co.edu.javeriana.fis.electoral.dominio.CandidatoTest
+23:18:11 [INFO] Tests run: 273, Failures: 0, Errors: 0, Skipped: 0
+23:18:12 [INFO] All coverage checks have been met.
+23:18:12 [INFO] BUILD SUCCESS

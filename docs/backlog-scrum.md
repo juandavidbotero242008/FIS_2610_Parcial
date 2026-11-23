@@ -4,12 +4,12 @@
 
 | Rol | Responsable |
 |---|---|
-| Product Owner | [Nombre] |
-| Scrum Master | [Nombre] |
-| Development Team | [Nombres] |
+| Product Owner | Juan David Botero |
+| Scrum Master | Juan David Botero |
+| Development Team | Juan David Botero |
 
 **Cadencia:** 3 sprints de 1 semana.
-**Herramienta de gestión:** GitHub Issues + GitHub Projects (tablero Kanban: Backlog → En curso → En revisión → Hecho).
+**Herramienta de gestión:** GitHub Issues con etiquetas de sprint (`sprint-1`, `sprint-2`, `sprint-3`).
 
 ## 2. Definition of Done (DoD)
 
@@ -113,7 +113,7 @@ Una historia se considera terminada cuando:
 #### US-10 · Suite de pruebas unitarias y matriz de trazabilidad
 - **Como** equipo de desarrollo **quiero** una suite de pruebas con casos negativos y de límite **para** asegurar la calidad del sistema.
 - **Criterios de aceptación:**
-  - [ ] 273 pruebas en verde.
+  - [x] 273 pruebas en verde.
   - [ ] Cada método de negocio tiene al menos dos pruebas.
   - [ ] Cobertura de instrucciones ≥ 70 %.
   - [ ] Matriz de trazabilidad publicada.
@@ -147,21 +147,20 @@ Una historia se considera terminada cuando:
 
 ## 5. Cómo crear los issues
 
-Opción A — automática con GitHub CLI:
+Los 12 issues ya están publicados y cerrados en <https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues?q=is%3Aissue>.
+
+Para recrearlos con GitHub CLI:
 
 ```bash
-bash scripts/crear-issues.sh OWNER/FIS_2610_Parcial
+bash scripts/crear-issues.sh juandavidbotero242008/FIS_2610_Parcial
 ```
 
-Opción B — manual: crear un issue por cada historia usando la plantilla *Historia de usuario*, con título `[US-XX] Nombre`, etiquetas `historia`, `scrum` y el sprint correspondiente (`sprint-1`, `sprint-2`, `sprint-3`).
+Opción manual: crear un issue por cada historia usando la plantilla *Historia de usuario*, con título `[US-XX] Nombre`, etiquetas `historia`, `scrum` y el sprint correspondiente (`sprint-1`, `sprint-2`, `sprint-3`).
 
 ## 6. Evidencias de Scrum
 
-Para el informe se recomienda capturar:
-
-1. Listado de issues con su estado (abiertos/cerrados).
-2. Tablero de GitHub Projects con las columnas del flujo.
-3. Cada issue cerrado con su commit asociado (`Closes #N`).
-4. Burndown por sprint (opcional, elaborado en hoja de cálculo).
-
-Las capturas deben guardarse en [`docs/evidencias/`](evidencias/).
+1. Los 12 issues están cerrados y etiquetados por sprint: [`docs/evidencias/06-issues.png`](evidencias/06-issues.png).
+2. Cada issue tiene un comentario con el commit (`ee88120`, `0086e42`, `dc37def`, etc.) que implementa la historia.
+3. El historial de commits convencionales está en [`docs/evidencias/08-commits.png`](evidencias/08-commits.png).
+4. No se usó GitHub Projects; el estado del sprint se evidencia con las etiquetas `sprint-1`, `sprint-2` y `sprint-3`.
+5. Burndown por sprint: opcional, no incluido.
