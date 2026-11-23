@@ -197,4 +197,4 @@ pandoc docs/informe.md -o docs/informe.pdf --pdf-engine=weasyprint --toc
 - [x] Historial con conventional commits.
 - [x] Informe PDF con justificaciones y capturas.
 - [x] Badge del README apuntando al repositorio real.
-- [ ] Completar el nombre del docente en la portada.
+- [x] Datos de portada completos (integrantes y docente).

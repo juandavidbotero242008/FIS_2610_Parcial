@@ -4,9 +4,9 @@
 
 | Rol | Responsable |
 |---|---|
-| Product Owner | Juan David Botero |
-| Scrum Master | Juan David Botero |
-| Development Team | Juan David Botero |
+| Product Owner | Juan David Botero Avila |
+| Scrum Master | Esteban Cantillo Valverde |
+| Development Team | Santiago Baez Parra · Sergio Pulido Grimaldo |
 
 **Cadencia:** 3 sprints de 1 semana.
 **Herramienta de gestión:** GitHub Issues con etiquetas de sprint (`sprint-1`, `sprint-2`, `sprint-3`).

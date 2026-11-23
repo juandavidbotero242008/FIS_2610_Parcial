@@ -6,8 +6,8 @@
 
 | Campo | Valor |
 |---|---|
-| Integrantes | Juan David Botero |
-| Docente | [Nombre del docente] |
+| Integrantes | Juan David Botero Avila · Esteban Cantillo Valverde<br>Santiago Baez Parra · Sergio Pulido Grimaldo |
+| Docente | Fabrizio Bolaño Lopez |
 | Fecha de entrega | 23/11/2026 |
 | Repositorio | `https://github.com/juandavidbotero242008/FIS_2610_Parcial` |
 | Rama del equipo | `feature/parcial-2` |
@@ -901,9 +901,9 @@ Historial de ejecuciones: [GitHub Actions](https://github.com/juandavidbotero242
 
 | Rol | Responsable |
 |---|---|
-| Product Owner | Juan David Botero |
-| Scrum Master | Juan David Botero |
-| Development Team | Juan David Botero |
+| Product Owner | Juan David Botero Avila |
+| Scrum Master | Esteban Cantillo Valverde |
+| Development Team | Santiago Baez Parra · Sergio Pulido Grimaldo |
 
 Se planearon **3 sprints de una semana**, con revisión al final de cada uno y retrospectiva para ajustar el alcance.
 

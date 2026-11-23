@@ -134,6 +134,9 @@ Run de referencia: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/ac
 
 ## Autores
 
-- Juan David Botero
+- Juan David Botero Avila
+- Esteban Cantillo Valverde
+- Santiago Baez Parra
+- Sergio Pulido Grimaldo
 
 **Curso:** Fundamentos de Ingeniería de Software — Segundo Parcial, 2026.

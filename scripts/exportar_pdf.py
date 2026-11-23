@@ -198,8 +198,9 @@ def main() -> None:
       <div class="titulo">Sistema de Información para la Gestión, Transparencia y Análisis del Proceso Electoral en Colombia</div>
       <div class="subtitulo">Segundo Parcial — Fundamentos de Ingeniería de Software</div>
       <div class="datos">
-        <strong>Integrante:</strong> Juan David Botero<br>
-        <strong>Docente:</strong> [Nombre del docente]<br>
+        <strong>Integrantes:</strong> Juan David Botero Avila · Esteban Cantillo Valverde<br>
+        Santiago Baez Parra · Sergio Pulido Grimaldo<br>
+        <strong>Docente:</strong> Fabrizio Bolaño Lopez<br>
         <strong>Repositorio:</strong> github.com/juandavidbotero242008/FIS_2610_Parcial<br>
         <strong>Fecha:</strong> 23/11/2026
       </div>
