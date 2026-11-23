@@ -18,7 +18,7 @@ Todas las evidencias fueron generadas a partir de la ejecución real del proyect
 ## Enlaces vivos
 
 - Repositorio: <https://github.com/juandavidbotero242008/FIS_2610_Parcial>
-- Run del equipo: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149>
+- Run del equipo: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/workflows/ci.yml>
 - Issues: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues?q=is%3Aissue>
 - Commits: <https://github.com/juandavidbotero242008/FIS_2610_Parcial/commits/main>
 

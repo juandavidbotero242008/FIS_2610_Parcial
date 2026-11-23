@@ -763,7 +763,7 @@ Tests run: 273, Failures: 0, Errors: 0, Skipped: 0
 
 ### 4.6 Evidencias
 
-La salida completa de la verificación local está en [`evidencias/salida-pruebas.txt`](evidencias/salida-pruebas.txt) y los contadores de cobertura en [`evidencias/cobertura.txt`](evidencias/cobertura.txt). El run del pipeline está disponible en [GitHub Actions](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149).
+La salida completa de la verificación local está en [`evidencias/salida-pruebas.txt`](evidencias/salida-pruebas.txt) y los contadores de cobertura en [`evidencias/cobertura.txt`](evidencias/cobertura.txt). El historial del pipeline está disponible en [GitHub Actions](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/workflows/ci.yml).
 
 ![Ejecución de mvn clean verify](evidencias/01-mvn-verify.png)
 
@@ -871,7 +871,7 @@ La cobertura actual (87.55 %) deja un margen de 17 puntos, suficiente para que e
 
 ### 5.5 Evidencias
 
-Run del equipo en la rama `feature/parcial-2`: [actions/runs/45287569149](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149). También quedó en verde la rama `main` en [actions/runs/45287573938](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287573938).
+Historial de ejecuciones: [GitHub Actions](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/workflows/ci.yml). Las ramas `feature/parcial-2` y `main` están en verde; la captura corresponde al run del equipo.
 
 ![Run exitoso en GitHub Actions](evidencias/03-actions-exito.png)
 

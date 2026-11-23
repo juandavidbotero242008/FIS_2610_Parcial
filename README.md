@@ -8,7 +8,7 @@
 
 Proyecto del **Segundo Parcial de Fundamentos de Ingeniería de Software** (Pontificia Universidad Javeriana). Modela el proceso electoral colombiano de 2026: planeación territorial, partidos y candidatos, jurados, actas de escrutinio, incidentes, reclamaciones y consolidación de resultados.
 
-**Repositorio:** <https://github.com/juandavidbotero242008/FIS_2610_Parcial> · **Pipeline:** [run en verde](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/runs/45287569149) · **Issues:** [12 historias cerradas](https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues?q=is%3Aissue)
+**Repositorio:** <https://github.com/juandavidbotero242008/FIS_2610_Parcial> · **Pipeline:** [GitHub Actions](https://github.com/juandavidbotero242008/FIS_2610_Parcial/actions/workflows/ci.yml) · **Issues:** [12 historias cerradas](https://github.com/juandavidbotero242008/FIS_2610_Parcial/issues?q=is%3Aissue)
 
 
 ## Contenido
